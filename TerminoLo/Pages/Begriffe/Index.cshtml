@@ -1,0 +1,54 @@
+﻿@page
+@model TerminoLo.Pages.Begriffe.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Begriff[0].Hauptbenennung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Begriff[0].TagListe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Begriff[0].Bemerkungen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Begriff[0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Begriff) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hauptbenennung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TagListe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bemerkungen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

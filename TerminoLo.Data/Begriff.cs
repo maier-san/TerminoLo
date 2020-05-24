@@ -18,8 +18,11 @@ namespace TerminoLo.Data
       [StringLength(100)]
       public string Hauptbenennung { get; set; }
 
-      [StringLength(400)]
-      public string Vermeidungsliste { get; set; }
+      [StringLength(500)]
+      public string TagListe { get; set; }
+
+      [StringLength(1000)]
+      public string Bemerkungen { get; set; }
 
       public Freigabestatus Status { get; set; }
    }

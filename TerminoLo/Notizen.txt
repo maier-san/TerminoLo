@@ -1,0 +1,14 @@
+﻿E:\Entwicklung\MSanGitDev\TerminoLo\TerminoLo.Data>dotnet ef dbcontext info -s ..\TerminoLo\TerminoLo.csproj
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.11-servicing-32099 initialized 'TerminoLoDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=128
+Provider name: Microsoft.EntityFrameworkCore.SqlServer
+Database name: TerminoLoWM
+Data source: ESDEVWM3\wmsql08R2
+Options: MaxPoolSize=128
+
+E:\Entwicklung\MSanGitDev\TerminoLo\TerminoLo.Data>dotnet ef migrations add TermDBS001 -s ..\TerminoLo\TerminoLo.csproj
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.11-servicing-32099 initialized 'TerminoLoDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=128
+Done. To undo this action, use 'ef migrations remove'
+
+E:\Entwicklung\MSanGitDev\TerminoLo\TerminoLo.Data>dotnet ef database update -s ..\TerminoLo\TerminoLo.csproj
